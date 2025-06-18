@@ -1,0 +1,22 @@
+
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>客服訓練機器人</title>
+  </head>
+  <body>
+    <h2>客服訓練互動系統</h2>
+    <form method="post">
+      <label>模擬輸入（文字）：</label><br>
+      <input type="text" name="user_input" size="60"><br><br>
+      <button type="submit">送出測試</button>
+    </form>
+    {% if response %}
+    <hr>
+    <p><strong>你說：</strong>{{ user_input }}</p>
+    <p><strong>🧠 判斷情境：</strong>{{ scene }}</p>
+    <p><strong>🤖 建議回應：</strong>{{ response }}</p>
+    {% endif %}
+  </body>
+</html>
